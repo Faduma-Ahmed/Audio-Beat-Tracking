@@ -2,7 +2,7 @@
 
 I adapted a beat detection algorithm from the paper ["Tempo and beat analysis of acoustic musical signals"(Scheirer, 1998)](http://www-labs.iro.umontreal.ca/~pift6080/H09/documents/papers/scheirer_jasa.pdf).
 This algorithm processes an audio input and outputs the frequency(tempo) and phase(duration of beat) of the audio.
-Steps.
+
 
 #### BLOCK DIAGRAM
 <img src="block_diagram.png" width="350">
