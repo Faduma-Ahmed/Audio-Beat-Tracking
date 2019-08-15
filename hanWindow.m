@@ -14,17 +14,15 @@ windowLen= 0.4;
     han(a) = (cos(a*pi/hanLen/2)).^2;
  end
    
-  % Convolving with half-Hanning same as multiplying in
-  % frequency. Multiply half-Hanning FFT by signal FFT. Inverse
-  % transform to get output in the time domain.
-
+  % Convolving with half-Hanning same as multiplying half-Hanning FFT with signal FFT. 
   for i = 1:nBands
     filtered(:,i) = fft(signal(i,:)).*fft((han'));
-    output(:,i) = real(ifft(filtered(:,i)));
+    output(:,i) = real(ifft(filtered(:,i))); %take inverse FFT to convert to time domain
   end
 
 Total = sum(output');
- %convert time domaim
+
+ %Plotting 
 N=length(Total');
 t = linspace(0, N/Fs, N);
 
