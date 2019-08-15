@@ -5,7 +5,7 @@ This algorithm processes an audio input and outputs the frequency(tempo) and pha
 Steps.
 
 #### BLOCK DIAGRAM
-![test image size](block_diagram.png&s=200)
+![](block_diagram.png =250x250)
 
 #### 1.Filterbank: 
 This filterbank has 6 bands each covering one-octave range. The lowest band is a 200Hz lowpass filter, and the highest band is  
