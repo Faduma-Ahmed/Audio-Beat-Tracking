@@ -1,6 +1,6 @@
-function result=hanWindow(signal, bandlimits, Fs)
+function output=hanWindow(signal, bandlimits, Fs)
 
-Total=0;
+
 nSignal = length(signal);
 nBands = length(bandlimits);
 windowLen= 0.4;
@@ -27,11 +27,11 @@ N=length(Total');
 t = linspace(0, N/Fs, N);
 
 % %Graph
-figure('Name','After Windowing');
-plot(t, Total','--');
-title('Signal (Time Domain)')
-xlabel('Time(s)')
-ylabel('Relative Signal Magnitude')
+% figure('Name','After Windowing');
+% plot(t, Total','--');
+% title('Signal (Time Domain)');
+% xlabel('Time(s)');
+% ylabel('Envelope');
 
 
  

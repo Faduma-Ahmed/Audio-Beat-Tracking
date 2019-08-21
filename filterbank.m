@@ -17,19 +17,19 @@ rectA = zeros(length(bandlimits),length(audio));
     filtA(1,:) = filter(lowPass200,audio);
     rectA(1,:)= abs(filtA(1,:)); 
     filtA(2,:) = filter(bandPass1,audio);
-    rectA(2,:)= abs(filtA(1,:)); 
+    rectA(2,:)= abs(filtA(2,:)); 
     filtA(3,:) = filter(bandPass2,audio);
-    rectA(3,:)= abs(filtA(1,:)); 
+    rectA(3,:)= abs(filtA(3,:)); 
     filtA(4,:) = filter(bandPass3,audio);
-    rectA(4,:)= abs(filtA(1,:)); 
+    rectA(4,:)= abs(filtA(4,:)); 
     filtA(5,:) = filter(bandPass4,audio);
-    rectA(5,:)= abs(filtA(1,:)); 
+    rectA(5,:)= abs(filtA(5,:)); 
     filtA(6,:) = filter(highPass3200,audio);
-    rectA(6,:)= abs(filtA(1,:)); 
+    rectA(6,:)= abs(filtA(6,:)); 
     
     
     Total = sum(filtA); 
-    disp(size(filtA));
+%     disp(size(filtA));
 
  
 %convert time domaim
@@ -41,7 +41,7 @@ NFFT = length(Total');
 Y = fft(Total',NFFT);
 F = ((0:1/NFFT:1-1/NFFT)*Fs).';
 
-% 
+
 % %Graph
 % figure('Name','After Filterbank');
 % subplot(2,1,1);

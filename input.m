@@ -18,7 +18,7 @@ reMonoY = resample(MonoY,Fs,RealFS);
 samplesize = size(reMonoY);
   
 % play audio
-sound(reMonoY,Fs);
+% sound(reMonoY,Fs);
 
 %convert time domaim
 N=length(reMonoY);
@@ -47,7 +47,9 @@ F = ((0:1/NFFT:1-1/NFFT)*Fs).';
  status = 'pass to filterbank...';
  a = filterbank(reMonoY,bandlimits, Fs);
  status = ' half-haning window ...'
-%  b = hanWindow(a, bandlimits, Fs);
-  
+ b = hanWindow(a, bandlimits, Fs);
+ status = 'Differntiating, Half Wave Rectifying ...'
+ c = diff_rect(b);
+ 
 
 
