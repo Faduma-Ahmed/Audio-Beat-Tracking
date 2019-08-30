@@ -7,15 +7,15 @@ This algorithm processes an audio input and outputs the frequency(tempo) and pha
 #### BLOCK DIAGRAM
 <img src="block_diagram.png" width="350">
 
-#### 1.Filterbank: 
+#### 1. Filterbank: 
 This filterbank has 6 bands each covering one-octave range. The lowest band is a 200Hz lowpass filter, and the highest band is  
 a highpass filter with a cut-off off 3200Hz. The other 4 bands are band pass. Each filter was made with a 6th order, elliptic filter with a 3 dB passband ripple and a 40dB stopband ripple.
 
 
-#### 2.Envelope Extraction 
+#### 2. Envelope Extraction 
 The outputs from the filterbank was rectified and convolved with a 0.2s half-Hanning window
 
-#### 3.Differentiator & Half-Wave Rectifier
+#### 3. Differentiator & Half-Wave Rectifier
 "After calculating the envelope, the first-order difference function is calculated and half-wave rectified. This rectified
 difference signal will be examined for periodic modulation." 
 
