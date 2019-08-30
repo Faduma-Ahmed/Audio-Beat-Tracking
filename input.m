@@ -44,12 +44,14 @@ F = ((0:1/NFFT:1-1/NFFT)*Fs).';
 % ylabel('Relative Signal Magnitude')
 
 % run algorithm
- status = 'pass to filterbank...';
+ status = 'pass to Filterbank...';
  a = filterbank(reMonoY,bandlimits, Fs);
- status = ' half-haning window ...'
+ status = ' Half-haning Window ...'
  b = hanWindow(a, bandlimits, Fs);
- status = 'Differntiating, Half Wave Rectifying ...'
- c = diff_rect(b);
+ status = 'Differntiate & Half Wave Rectify...'
+ c = diffRect(b, Fs);
+ status = 'Comb Filter ...'
+ d = combFilter(c,bandlimits, Fs);
  
 
 
