@@ -26,9 +26,11 @@ vary by channel and cover the range of possible pulse frequencies to track. The 
 summed across frequency subbands. By examining the energy output from each resonance channel of the summed resonator filterbanks, the strongest periodic component of the signal may be determined. The frequency of the resonator
 with the maximum energy output is selected as the tempo of the signal.
 
-#### Results
+#### Plotting Results
 
-
+- [Filter Bank](FilterBank.png)
+- [Envelope](HanWindow.png)
+- [Rectified Envelope Difference](DiffRect.png)
 
 
 
